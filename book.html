@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style2.css" />
+  <title>สมุดรุ่น6/7</title>
+</head>
+
+<body class="book-page">
+  <div class="flipbook">
+    <div class="hard">
+        <img src="พาน.jpg" alt="" />
+        <small>สมุดรุ่น6/7</small>
+    </div>
+    
+    <div class="hard"></div>
+    <div>
+      <small>ยังจำวันแรกที่เรามาเจอกันได้ไหม?</small>
+      <small>นี่คือช่วงเวลาที่เราเริ่มต้นเดินทางด้วยกัน</small>
+    </div>
+    <div>
+      <img src="จบม 4.jpg" alt="" />
+      <small> นี่คือตอนเราจบม.4
+ </small>
+    </div>
+    <div>
+      <img src="ม.5.jpg" alt="" />
+      <small> นี่คือตอนเราจบม.5 </small>
+    </div>
+    <div>
+      <img src="ทำพานม.5.jpg" alt="" />
+      <small> นี่คือตอนเราทำพาน </small>
+    </div>
+    <div>
+      <img src="แก้งค์คีน.jpg" alt="แก้งค์คีน" />
+    </div>
+    <div>
+      <img src="ครูโตเง.jpg" alt="ครูโตเง" />
+    </div>
+    <div>
+      <img src="งาน.jpg" alt="งาน" />
+    </div>
+    <div>
+      <img src="งานน.jpg" alt="งานน" />
+    </div>
+    <div>
+      <img src="นาย.jpg" alt="นาย" />
+    </div>
+    <div>
+      <img src="พิง.jpg" alt="พิง" />
+    </div>
+    <div>
+      <img src="ภู.jpg" alt="ภู" />
+    </div>
+    <div>
+      <img src="ส้มฟู.jpg" alt="ส้มฟู" />
+    </div>
+    <div>
+      <img src="วิทคอม.jpg" alt="วิทคอม" />
+    </div>
+    <div>
+      <img src="สิ.jpg" alt="สิ" />
+    </div>
+    <div class="hard"></div>
+    <small>นี่แค่จุดเริ่มต้นของชีวิตนะเพื่อนๆ ขอให้ทุกคนมีอนาคตที่อยากจะเป็น
+      แล้วไว้เจอกันเมื่อชาติต้องการ
+    </small>
+    <small>จาก Uwyn</small>
+    <small>ถึง ม.6/7ทุกคน</small>
+    <div class="hard"></div>
+  </div>
+
+  <script src="jquery.js"></script>
+  <script src="turn.js"></script>
+  <script>
+    $(".flipbook").turn();
+  </script>
+</body>
+<audio id="bookAudio" autoplay loop src="Dr._Dog_-_Whered_All_the_Time_Go_(mp3.pm).mp3"></audio>
+<button id="audioToggle" type="button" aria-label="Pause music">⏸</button>
+
+<script>
+  const audio = document.getElementById('bookAudio');
+  const toggle = document.getElementById('audioToggle');
+
+  toggle.addEventListener('click', () => {
+    if (audio.paused) {
+      audio.play();
+      toggle.textContent = '⏸';
+      toggle.setAttribute('aria-label', 'Pause music');
+    } else {
+      audio.pause();
+      toggle.textContent = '▶';
+      toggle.setAttribute('aria-label', 'Play music');
+    }
+  });
+</script>
+
+</html>
